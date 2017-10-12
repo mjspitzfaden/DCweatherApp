@@ -43,7 +43,8 @@ class MainHandler(TemplateHandler):
 
     # city in database
     try:
-        data_local = WeatherApp.select().where(WeatherApp.city == city_local).where(WeatherApp.created >= old).get()
+        weather_data = WeatherApp.select().where(WeatherApp.city == city_local).where(WeatherApp.created >= old).get()
+        data_local = weather_data.data
         print("from database")
     # api call if not in database
     except:
