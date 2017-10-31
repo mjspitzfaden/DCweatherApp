@@ -52,8 +52,16 @@ class MainHandler(TemplateHandler):
         data_local = json.loads(r.text)
         weather_data = WeatherApp.create(city = city_local, data = data_local, created = timestamp)
         print(r.json())
-        #weather_data.save()
-
+    weather_data.save()
+    #longatude = data_local['coord']['lon']
+    #lat = data_local['coord']['lat']
+    #look = data_local['weather'][0]['main']
+    #temp = data_local['main']['temp']
+    #humidity = data_local['main']['humidity']
+    #pressure = data_local['main']['pressure']
+    #wind = data_local['wind']['speed']
+    #az = data_local['wind']['deg']
+    #country = data_local['country']
 
     self.render_template("wform.html", {'data': data_local })
     # render the weather data

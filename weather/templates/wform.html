@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
-<body>
+<title>WEATHER APPLICATION</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h2>Please enter the city to view your weather</h2>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link href="../../static/css/weather.css" rel="stylesheet" type="text/css">
 
-<form action="" method="post">
-City Name:<br>
-<input type="text" name="city"><br>
+<div class = "weather">
+  <body background ="../../static/imgs/weather.jpg" class="img-fluid" alt="Responsive image">
+</div>
+    <h1>WEATHER APPLICATION</h2>
+    <h2>Please enter the city to view your weather</h2>
 
-<input type="submit" value="Send">
-<input type="reset" value="Reset">
-</form>
-{% if data %}
-<p> {{data}}</p>
-{% endif %}
-</body>
-</html>
+    <form id="city" action="" method="post">
+      <h2>City Name:</h2><br>
+      <input type="text" name="city"></br>
+      <br></br>
+
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+    </form>
+<div id = "box" box-align center>
+    {% if data %}
+    <p> {{data}}</p>
+    {% endif %}
+</div>
+    <p>
+  </body>
+
+  </html>
