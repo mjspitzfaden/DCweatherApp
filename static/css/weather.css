@@ -1,7 +1,7 @@
 body {
   background-color: blue;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 150%;
 
 }
 
@@ -17,6 +17,7 @@ h2 {
 
 p {
     color: white;
+    text-align: center;
 }
 
 #city {
@@ -31,4 +32,5 @@ p {
    width: 10%
    border: center;
    margin: center;
+   text-align: center;
  }

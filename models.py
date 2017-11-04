@@ -4,6 +4,7 @@ import os
 
 import peewee
 from playhouse.db_url import connect
+from playhouse.postgres_ext import JSONField
 
 DB = connect(
   os.environ.get(
@@ -19,9 +20,10 @@ class BaseModel (peewee.Model):
 class WeatherApp (BaseModel):
   id = peewee.PrimaryKeyField(unique = True)
   city = peewee.CharField(max_length=60)
-  data = peewee.TextField()
+  #data = peewee.TextField()
+  data = JSONField()
   created = peewee.DateTimeField(
             default=datetime.datetime.utcnow)
 
   def __str__ (self):
-    return self.created
+    return self.data

@@ -23,11 +23,16 @@
       <input type="submit" value="Send">
       <input type="reset" value="Reset">
     </form>
+
+
 <div id = "box" box-align center>
-    {% if data %}
-    <p> {{data}}</p>
-    {% endif %}
+
+    <p> The location is {{city}} in the {{country}}. It is currently {{look}}, and the temperature is {{temp}} degrees Fahrenheit.</p>
+    <p> The current humidy is {{humidity}}, and the wind speed is {{wind}}.</p>
+    <p> Lat: {{lat}}  Long: {{longatude}} Pressure: {{pressure}} </p>
+
 </div>
+
     <p>
   </body>
 
